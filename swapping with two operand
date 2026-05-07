@@ -1,0 +1,22 @@
+\\ swapping with two operand
+public class values {
+    public static void main(String[] args) {
+      
+        int x,y;
+        x=5;
+        y=10;
+         System.out.println("before swapping");
+          System.out.println("x="+x+"y="+y);
+        x+=y;
+        y=x-y;
+        x-=y;
+        
+        
+       
+        System.out.println("before swapping");
+      System.out.println("x="+x+"y="+y);
+        
+       
+      
+    }
+}
