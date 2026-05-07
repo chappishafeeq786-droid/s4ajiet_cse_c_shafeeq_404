@@ -1,0 +1,36 @@
+public class values {
+    public static void main(String[] args) {
+        int n = 153; 
+        int original = n;
+        
+        int max = 0;
+        int sum = 0;
+        int armstrongSum = 0;
+        int digit;
+        while (n > 0) {
+            digit = n % 10; 
+            
+            
+            if (digit > max) {
+                max = digit;
+            }
+            
+            sum = sum + digit;
+            
+            
+            armstrongSum = armstrongSum + (digit * digit * digit);
+            
+            n = n / 10; 
+        }
+
+        System.out.println("Largest Digit: " + max);
+        System.out.println("Sum of Digits: " + sum);
+        
+     
+        if (armstrongSum == original) {
+            System.out.println(original + " is an Armstrong number.");
+        } else {
+            System.out.println(original + " is NOT an Armstrong number.");
+        }
+    }
+}
