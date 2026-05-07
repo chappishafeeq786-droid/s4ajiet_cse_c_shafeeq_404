@@ -1,0 +1,22 @@
+
+\\swaqpping with using 3rd
+public class values {
+    public static void main(String[] args) {
+      
+        int power,ninja,bottle;
+        
+        power= 30;
+        ninja = 20;
+   
+          System.out.println("power="+power+"ninja="+ninja);
+          bottle=power;
+          power=bottle;
+          ninja=power;
+        
+      System.out.println("power="+power+"ninja="+ninja);
+        
+       
+      
+    }
+}
+
