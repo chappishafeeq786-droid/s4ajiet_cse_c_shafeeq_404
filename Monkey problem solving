@@ -14,14 +14,14 @@ public class values {
         Db=m/k;
         Dp=p/j;
         tot=Db+Dp;
-        rem=n-tot;
+        
         n=n-tot;
         if(m%k!=0 || p%j!=0)
         {
             n=n-1;
             
         }
-        System.out.println("monkey remaining in tree:"+rem);
+        System.out.println("monkey remaining in tree:"+n);
          
         
         
