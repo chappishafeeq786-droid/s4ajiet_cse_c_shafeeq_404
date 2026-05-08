@@ -1,0 +1,31 @@
+import java.util.Arrays;
+
+class AnagramCheck {
+    public static void main(String[] args) {
+        String s1 = "Listen";
+        String s2 = "Silent";
+
+        String a = s1.toLowerCase();
+        String b = s2.toLowerCase();
+
+       
+        if (a.length() != b.length()) {
+            System.out.println(s1 + " and " + s2 + " are not anagrams.");
+        } else {
+           
+            char[] x = a.toCharArray();
+            char[] y = b.toCharArray();
+
+          
+            Arrays.sort(x);
+            Arrays.sort(y);
+
+            
+            if (Arrays.equals(x, y)) {
+                System.out.println(s1 + " and " + s2 + " are anagrams.");
+            } else {
+                System.out.println(s1 + " and " + s2 + " are not anagrams.");
+            }
+        }
+    }
+}
