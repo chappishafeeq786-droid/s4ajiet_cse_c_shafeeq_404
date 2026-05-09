@@ -1,0 +1,56 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class Bottle {
+    String brand;
+    String colour;
+    int volume;
+    boolean isOpen;
+    boolean isEmpty; 
+    boolean isFull;  
+
+    public Bottle(String brand, String colour, int volume) {
+        this.brand = brand;
+        this.colour = colour;
+        this.volume = volume;
+        this.isOpen = false;
+        this.isEmpty = true; 
+        this.isFull = false;
+    }
+
+    public void fillBottle() {
+        if (!isOpen) {
+            System.out.println("Cannot fill: The cap is closed!");
+            return;
+        }
+        isEmpty = false;
+        isFull = true;
+        System.out.println("The bottle is now full.");
+    }
+
+    public void emptyBottle() {
+        if (!isOpen) {
+            System.out.println("Cannot empty: The cap is closed!");
+            return;
+        }
+        isEmpty = true;
+        isFull = false;
+        System.out.println("The bottle is now empty.");
+    }
+
+    public void displayStatus() {
+        System.out.println("--- Bottle Status ---");
+        System.out.println("Brand: " + brand);
+        System.out.println("Is Open: " + isOpen);
+        System.out.println("Is Empty: " + isEmpty);
+        System.out.println("Is Full: " + isFull);
+    }
+
+    public static void main(String[] args) {
+        Bottle myBottle = new Bottle("Tupperware", "Blue", 1000);
+        
+        myBottle.isOpen = true;
+        myBottle.fillBottle();
+        myBottle.displayStatus();
+    }
+}
